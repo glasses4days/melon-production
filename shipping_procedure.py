@@ -25,7 +25,7 @@ class Melon(object):
 
         robots.cleanerbot.clean(self)
         robots.stickerbot.apply_logo(self)
-    
+
     def __str__(self):
         """Print out information about melon."""
 
@@ -39,6 +39,16 @@ class Melon(object):
 
 # FIXME: Add Squash class definition here.
 
+class Squash(Melon):
+    """Winter Squash"""
+
+    def prep(self):
+        """Prepare the squash."""
+
+        robots.cleanerbot.clean(self)
+        robots.stickerbot.apply_logo(self)
+        #added the .paint(self) method to the prep method
+        robots.painterbot.paint(self)
 
 def show_help():
 
